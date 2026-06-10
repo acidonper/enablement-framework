@@ -69,3 +69,5 @@ gitlab_pat_old() {
     GITLAB_PAT=$(echo $body_header | perl -ne 'print "$1\n" if /created-personal-access-token"[[:blank:]]value="(.+?)"/' | sed -n 1p)    
     echo $GITLAB_PAT
 }
+
+gitlab_pat
